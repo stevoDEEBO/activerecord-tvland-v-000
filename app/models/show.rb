@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :characters
 
   def build_network(net_call_letters)
-    self.network_id = Network.new(call_letters: net_call_letters.values)
+    self.network_id = Network.new(call_letters: net_call_letters.values).id
     binding.pry
   end
 end

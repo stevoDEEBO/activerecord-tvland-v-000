@@ -7,6 +7,6 @@ class Character < ActiveRecord::Base
   end
 
   def build_show(showname)
-    self.show = Show.new(name: showname.values[0])
+    self.show = Show.new(name: showname.to_s.strip)
   end
 end

@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   belongs_to :network
 
   def build_network(net_call_letters)
-    self.network = Network.new(call_letters: net_call_letters.defaults)
+    self.network = Network.new(call_letters: net_call_letters.default)
     #binding.pry
   end
 end

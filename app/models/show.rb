@@ -6,6 +6,6 @@ class Show < ActiveRecord::Base
 
   def build_network(net_call_letters)
     self.network_id = Network.new(call_letters: net_call_letters.values)
-    binding.pry
+    #binding.pry
   end
 end
